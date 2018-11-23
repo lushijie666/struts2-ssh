@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <include file="com/xxx/struts/struts_*"/>
+    
+      <!-- 开发模式 -->
+    <constant name="struts.devMode" value="false"/>
+    <!-- 编码 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!-- 引入文件上传错误提示 -->
+    <constant name="struts.custom.i18n.resources" value="fileuploadmessage"/>
+    <!-- 上传文件大小10M,单次上传文件大小，不区分是多文件还是单文件 -->
+    <constant name="struts.multipart.maxSize" value="10485760"/>
+    <!-- 映射方法 -->
+    <constant name="struts.action.extension" value="do,action"/>
+    <!-- 动态映射方法 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	<!-- 在struts.xml中指定objectFactory对象工厂为spring，即action的创建交由spring进行 -->
+	<constant name="struts.objectFactory" value="spring"/>
+	
+    <package name="struts2" namespace="/" extends="struts-default,json-default">
+    </package>
+    
+</struts>
