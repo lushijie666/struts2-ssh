@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="class" namespace="/class" extends="struts2">
+
+        <action name="list" class="classController" method="getClassList">
+            <interceptor-ref name="params"/>
+        </action>
+        <action name="deleteClass" class="classController" method="deleteClass">
+            <interceptor-ref name="params"/>
+        </action>
+    </package>
+</struts>
